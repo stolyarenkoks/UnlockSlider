@@ -1,4 +1,4 @@
-# UnlockSlider
+# Unlock Slider
 Fully customized Slide to Unlock Control, written on Swift under the short name - UnlockSlider.
 
 ![Preview](preview.png)

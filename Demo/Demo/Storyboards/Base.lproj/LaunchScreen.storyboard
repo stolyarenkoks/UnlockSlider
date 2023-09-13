@@ -16,29 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app-icon" translatesAutoresizingMaskIntoConstraints="NO" id="FXf-MK-OOx">
-                                <rect key="frame" x="32" y="250.66666666666663" width="311" height="311"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="FXf-MK-OOx" secondAttribute="height" multiplier="1:1" id="UyM-lV-RxA"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to UnlockSlider Demo!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj0-Kt-Ecz">
-                                <rect key="frame" x="32" y="81.999999999999986" width="311" height="136.66666666666663"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="40" y="377.33333333333331" width="295" height="57.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.85174584389999997" green="0.350482136" blue="0.30215376620000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.0096549412103374508" green="0.033279092671763745" blue="0.3687263257575758" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="Tj0-Kt-Ecz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="2OW-V1-7xU"/>
-                            <constraint firstItem="Tj0-Kt-Ecz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="2e6-aC-BTX"/>
-                            <constraint firstItem="Tj0-Kt-Ecz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Apk-hi-mPa"/>
-                            <constraint firstItem="FXf-MK-OOx" firstAttribute="top" secondItem="Tj0-Kt-Ecz" secondAttribute="bottom" constant="32" id="Dsk-Ca-ie6"/>
-                            <constraint firstItem="FXf-MK-OOx" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="eOL-oN-Lqp"/>
-                            <constraint firstItem="FXf-MK-OOx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="hAs-3c-HQT"/>
-                            <constraint firstItem="FXf-MK-OOx" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rQa-he-D9t"/>
+                            <constraint firstItem="Tj0-Kt-Ecz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eJu-Oh-SWS"/>
+                            <constraint firstItem="Tj0-Kt-Ecz" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="u1R-L0-0wk"/>
+                            <constraint firstItem="Tj0-Kt-Ecz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zc4-nJ-aqv"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,7 +37,4 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="app-icon" width="1024" height="1024"/>
-    </resources>
 </document>

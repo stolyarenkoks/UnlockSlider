@@ -34,10 +34,25 @@ class DemoViewController: UIViewController {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var descriptionLabel: UILabel!
     @IBOutlet private var sliderContainer: UIView!
+    @IBOutlet private var sliderNoteLabel: UILabel!
 
     // MARK: - Private Properties
 
-    private var isEmergencySOSActive = false
+    private var isEmergencySOSActive = false {
+        didSet {
+            updateGradient(animated: true)
+            generateFeedback()
+        }
+    }
+
+    private lazy var gradientLayer: CAGradientLayer = {
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.type = .axial
+        gradientLayer.locations = [0, 1]
+        return gradientLayer
+    }()
+
+    private let generator = UIImpactFeedbackGenerator()
 
     // MARK: - ViewController Lifecycle Properties
 
@@ -65,6 +80,12 @@ class DemoViewController: UIViewController {
     private func setupUI() {
         titleLabel.text = Const.Demo.title
         view.backgroundColor = .redColor
+
+        gradientLayer.frame = view.bounds
+        view.layer.insertSublayer(gradientLayer, at: .zero)
+        updateGradient()
+
+        sliderNoteLabel.text = Const.Demo.sliderNoteTitle
     }
 
     private func setupSlider() {
@@ -92,7 +113,7 @@ class DemoViewController: UIViewController {
         slider.sliderImageTintColor = .white
 
         slider.setSliderImage(UIImage(systemName: "chevron.right")?.applyingSymbolConfiguration(.init(weight: .medium)))
-        slider.setSliderFont(.systemFont(ofSize: 15.0))
+        slider.setSliderFont(.systemFont(ofSize: 18.0, weight: .medium))
         slider.setSliderBackgroundViewTitle(Const.Demo.activateSliderTitle)
         slider.setSliderDraggedViewTitle(Const.Demo.deactivateSliderTitle)
 
@@ -103,6 +124,23 @@ class DemoViewController: UIViewController {
 
     private func updateLabel() {
         descriptionLabel.text = isEmergencySOSActive ? Const.Demo.emergencySOSActiveTitle : Const.Demo.emergencySOSInactiveTitle
+    }
+
+    private func updateGradient(animated: Bool = false) {
+        let dynamicColor: UIColor = isEmergencySOSActive ? .purple : .blue
+        gradientLayer.setGradientColors(colors: [dynamicColor, UIColor.redColor],
+                                        positions: [CGPoint(x: 1, y: .zero), CGPoint(x: .zero, y: 1)],
+                                        animated: animated)
+    }
+
+    private func generateFeedback() {
+        if isEmergencySOSActive {
+            let generator = UINotificationFeedbackGenerator()
+            generator.notificationOccurred(.error)
+        } else {
+            let generator = UIImpactFeedbackGenerator(style: .heavy)
+            generator.impactOccurred()
+        }
     }
 }
 

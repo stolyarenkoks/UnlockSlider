@@ -41,10 +41,12 @@ struct Const {
     struct Demo {
         static let title = "Emergency SOS"
 
-        static let activateSliderTitle = "Slide to Activate SOS"
-        static let deactivateSliderTitle = "Slide to Deactivate SOS"
+        static let emergencySOSActiveTitle = "Emergency SOS Active!"
+        static let emergencySOSInactiveTitle = "Are you sure you want to activate an Emergency SOS?"
 
-        static let emergencySOSActiveTitle = "Emergency SOS in Progress!"
-        static let emergencySOSInactiveTitle = "Are you certain you want to activate an Emergency SOS?"
+        static let activateSliderTitle = "  Slide to Activate"
+        static let deactivateSliderTitle = "Slide to Deactivate"
+
+        static let sliderNoteTitle = "Swipe to call Emergency Services"
     }
 }

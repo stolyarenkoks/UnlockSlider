@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		C41281532AB1A7DD005E8494 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41281522AB1A7DD005E8494 /* Const.swift */; };
 		C4C5815C2AB1D51F00AFE94A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C5815B2AB1D51F00AFE94A /* UIColor+Extensions.swift */; };
-		C4C581602AB1D62F00AFE94A /* UnlockSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C5815F2AB1D62F00AFE94A /* UnlockSlider.framework */; };
-		C4C581612AB1D62F00AFE94A /* UnlockSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4C5815F2AB1D62F00AFE94A /* UnlockSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4C581652AB1E12800AFE94A /* UnlockSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C581642AB1E12800AFE94A /* UnlockSlider.framework */; };
+		C4C581662AB1E12800AFE94A /* UnlockSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4C581642AB1E12800AFE94A /* UnlockSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4C581682AB1E2AA00AFE94A /* CAGradientLayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C581672AB1E2AA00AFE94A /* CAGradientLayer+Extensions.swift */; };
 		CE1C362323F17DDC008F5BDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C362223F17DDC008F5BDE /* AppDelegate.swift */; };
 		CE1C362523F17DDC008F5BDE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C362423F17DDC008F5BDE /* SceneDelegate.swift */; };
 		CE1C362723F17DDC008F5BDE /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C362623F17DDC008F5BDE /* DemoViewController.swift */; };
@@ -26,7 +27,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C4C581612AB1D62F00AFE94A /* UnlockSlider.framework in Embed Frameworks */,
+				C4C581662AB1E12800AFE94A /* UnlockSlider.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,7 +37,8 @@
 /* Begin PBXFileReference section */
 		C41281522AB1A7DD005E8494 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		C4C5815B2AB1D51F00AFE94A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		C4C5815F2AB1D62F00AFE94A /* UnlockSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnlockSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4C581642AB1E12800AFE94A /* UnlockSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnlockSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4C581672AB1E2AA00AFE94A /* CAGradientLayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Extensions.swift"; sourceTree = "<group>"; };
 		CE1C361F23F17DDC008F5BDE /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE1C362223F17DDC008F5BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE1C362423F17DDC008F5BDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4C581602AB1D62F00AFE94A /* UnlockSlider.framework in Frameworks */,
+				C4C581652AB1E12800AFE94A /* UnlockSlider.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,7 +89,7 @@
 		C4C581502AB1ACB400AFE94A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C4C5815F2AB1D62F00AFE94A /* UnlockSlider.framework */,
+				C4C581642AB1E12800AFE94A /* UnlockSlider.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				C4C5815B2AB1D51F00AFE94A /* UIColor+Extensions.swift */,
+				C4C581672AB1E2AA00AFE94A /* CAGradientLayer+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				C4C5815C2AB1D51F00AFE94A /* UIColor+Extensions.swift in Sources */,
 				C41281532AB1A7DD005E8494 /* Const.swift in Sources */,
 				CE1C362323F17DDC008F5BDE /* AppDelegate.swift in Sources */,
+				C4C581682AB1E2AA00AFE94A /* CAGradientLayer+Extensions.swift in Sources */,
 				CE1C362523F17DDC008F5BDE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -400,14 +404,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 487D8YHE27;
+				DEVELOPMENT_TEAM = XPJG98X97P;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.iOS-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.UnlockSlider-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,14 +423,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 487D8YHE27;
+				DEVELOPMENT_TEAM = XPJG98X97P;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.iOS-Example";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sks.UnlockSlider-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

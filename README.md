@@ -3,22 +3,20 @@ Fully customized Slide to Unlock Control, written on Swift under the short name 
 
 ![Preview](preview.png)
 
-[Demo Video](demo.mov)
-
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/UnlockSlider)
 ![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-brightgreen)
 ![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-brightgreen)
 ![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen)
 
-[![GitHub issues](https://img.shields.io/github/issues/codeit-ios/UnlockSlider)](https://github.com/codeit-ios/UnlockSlider/issues)
-[![GitHub forks](https://img.shields.io/github/forks/codeit-ios/UnlockSlider)](https://github.com/codeit-ios/UnlockSlider/network)
-[![GitHub stars](https://img.shields.io/github/stars/codeit-ios/UnlockSlider)](https://github.com/codeit-ios/UnlockSlider/stargazers)
-![GitHub watchers](https://img.shields.io/github/watchers/codeit-ios/UnlockSlider?style=plastic)
-![GitHub contributors](https://img.shields.io/github/contributors/codeit-ios/UnlockSlider)
+[![GitHub issues](https://img.shields.io/github/issues/stolyarenkoks/UnlockSlider)](https://github.com/stolyarenkoks/UnlockSlider/issues)
+[![GitHub forks](https://img.shields.io/github/forks/stolyarenkoks/UnlockSlider)](https://github.com/stolyarenkoks/UnlockSlider/network)
+[![GitHub stars](https://img.shields.io/github/stars/stolyarenkoks/UnlockSlider)](https://github.com/stolyarenkoks/UnlockSlider/stargazers)
+![GitHub watchers](https://img.shields.io/github/watchers/stolyarenkoks/UnlockSlider?style=plastic)
+![GitHub contributors](https://img.shields.io/github/contributors/stolyarenkoks/UnlockSlider)
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/codeit-ios/UnlockSlider)
-![GitHub last commit](https://img.shields.io/github/last-commit/codeit-ios/UnlockSlider)
-[![GitHub license](https://img.shields.io/github/license/codeit-ios/UnlockSlider)](https://github.com/codeit-ios/UnlockSlider/blob/develop/LICENSE)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/stolyarenkoks/UnlockSlider)
+![GitHub last commit](https://img.shields.io/github/last-commit/stolyarenkoks/UnlockSlider)
+[![GitHub license](https://img.shields.io/github/license/stolyarenkoks/UnlockSlider)](https://github.com/stolyarenkoks/UnlockSlider/blob/develop/LICENSE)
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -61,7 +59,7 @@ pod 'UnlockSlider', '~> 0.0.1'
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate Alamofire into your Xcode project using Carthage, specify it in your `Cartfile`:
 
 ```ogdl
-github "codeit-ios/UnlockSlider" "0.0.1"
+github "stolyarenkoks/UnlockSlider" "0.0.1"
 ```
 
 ### Swift Package Manager
@@ -72,7 +70,7 @@ Once you have your Swift package set up, adding UnlockSlider as a dependency is 
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/codeit-ios/UnlockSlider", from: "0.0.1")
+    .package(url: "https://github.com/stolyarenkoks/UnlockSlider", from: "0.0.1")
 ]
 ```
 
@@ -91,7 +89,7 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 - Add UnlockSlider as a git [submodule](https://git-scm.com/docs/git-submodule) by running the following command:
 
   ```bash
-  $ git submodule add https://github.com/codeit-ios/UnlockSlider
+  $ git submodule add https://github.com/stolyarenkoks/UnlockSlider
   ```
 
 - Open the new `UnlockSlider` folder, and drag the `UnlockSlider.xcodeproj` into the Project Navigator of your application's Xcode project.
@@ -158,4 +156,4 @@ Take a look at the `Example` project for an integration example.
 
 ## License
 
-UnlockSlider is released under the MIT license. [See LICENSE](https://github.com/codeit-ios/UnlockSlider/blob/master/LICENSE) for details.
+UnlockSlider is released under the MIT license. [See LICENSE](https://github.com/stolyarenkoks/UnlockSlider/blob/master/LICENSE) for details.

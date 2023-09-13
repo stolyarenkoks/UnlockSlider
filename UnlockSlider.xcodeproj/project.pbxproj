@@ -8,17 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		C4C581552AB1B39000AFE94A /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C581542AB1B39000AFE94A /* UIView+Extensions.swift */; };
+		C4C581632AB1DB5A00AFE94A /* UnlockSliderInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C581622AB1DB5A00AFE94A /* UnlockSliderInterface.swift */; };
 		CE1C35BA23F17865008F5BDE /* UnlockSlider.h in Headers */ = {isa = PBXBuildFile; fileRef = CE1C35B823F17865008F5BDE /* UnlockSlider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE1C365F23F18766008F5BDE /* UnlockSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE759F1D23EAC10F00BB4E3D /* UnlockSlider.swift */; };
 		CE1C366023F1876F008F5BDE /* UnlockSliderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C35AB23EC5344008F5BDE /* UnlockSliderDelegate.swift */; };
 		CE1C366123F18770008F5BDE /* UnlockSliderPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C35AD23EC5365008F5BDE /* UnlockSliderPosition.swift */; };
-		CE1C366623F188A3008F5BDE /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C366523F188A3008F5BDE /* UIColor+Extensions.swift */; };
 		CE1C366823F188E6008F5BDE /* Debug+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C366723F188E6008F5BDE /* Debug+Extensions.swift */; };
 		CE1C366A23F18901008F5BDE /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1C366923F18901008F5BDE /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C4C581542AB1B39000AFE94A /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		C4C581622AB1DB5A00AFE94A /* UnlockSliderInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockSliderInterface.swift; sourceTree = "<group>"; };
 		CE1C35AB23EC5344008F5BDE /* UnlockSliderDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockSliderDelegate.swift; sourceTree = "<group>"; };
 		CE1C35AD23EC5365008F5BDE /* UnlockSliderPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockSliderPosition.swift; sourceTree = "<group>"; };
 		CE1C35B623F17865008F5BDE /* UnlockSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UnlockSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -28,7 +29,6 @@
 		CE1C35CD23F17AAD008F5BDE /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CE1C35CF23F17B40008F5BDE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE1C365623F18502008F5BDE /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		CE1C366523F188A3008F5BDE /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		CE1C366723F188E6008F5BDE /* Debug+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Debug+Extensions.swift"; sourceTree = "<group>"; };
 		CE1C366923F18901008F5BDE /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		CE759F1D23EAC10F00BB4E3D /* UnlockSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockSlider.swift; sourceTree = "<group>"; };
@@ -45,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4C581582AB1D40000AFE94A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C4C581622AB1DB5A00AFE94A /* UnlockSliderInterface.swift */,
+				CE1C35AB23EC5344008F5BDE /* UnlockSliderDelegate.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		C4C581592AB1D40E00AFE94A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE1C35AD23EC5365008F5BDE /* UnlockSliderPosition.swift */,
+				CE1C366923F18901008F5BDE /* RoundImageView.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		CE1C361423F17D45008F5BDE /* Deployment */ = {
 			isa = PBXGroup;
 			children = (
@@ -84,8 +102,9 @@
 		CE759F1C23EAC0DB00BB4E3D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				CE759F1D23EAC10F00BB4E3D /* UnlockSlider.swift */,
 				CE80340723F1B122004D870B /* Core */,
+				C4C581582AB1D40000AFE94A /* Protocols */,
+				C4C581592AB1D40E00AFE94A /* Helpers */,
 				CE80340823F1B135004D870B /* Extensions */,
 				CE80340A23F1B166004D870B /* Supporting Files */,
 			);
@@ -95,9 +114,7 @@
 		CE80340723F1B122004D870B /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				CE1C35AB23EC5344008F5BDE /* UnlockSliderDelegate.swift */,
-				CE1C35AD23EC5365008F5BDE /* UnlockSliderPosition.swift */,
-				CE1C366923F18901008F5BDE /* RoundImageView.swift */,
+				CE759F1D23EAC10F00BB4E3D /* UnlockSlider.swift */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -105,7 +122,6 @@
 		CE80340823F1B135004D870B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CE1C366523F188A3008F5BDE /* UIColor+Extensions.swift */,
 				CE1C366723F188E6008F5BDE /* Debug+Extensions.swift */,
 				C4C581542AB1B39000AFE94A /* UIView+Extensions.swift */,
 			);
@@ -225,11 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C581552AB1B39000AFE94A /* UIView+Extensions.swift in Sources */,
+				C4C581632AB1DB5A00AFE94A /* UnlockSliderInterface.swift in Sources */,
 				CE1C366023F1876F008F5BDE /* UnlockSliderDelegate.swift in Sources */,
 				CE1C366A23F18901008F5BDE /* RoundImageView.swift in Sources */,
 				CE1C366823F188E6008F5BDE /* Debug+Extensions.swift in Sources */,
 				CE1C366123F18770008F5BDE /* UnlockSliderPosition.swift in Sources */,
-				CE1C366623F188A3008F5BDE /* UIColor+Extensions.swift in Sources */,
 				CE1C365F23F18766008F5BDE /* UnlockSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -31,49 +31,26 @@ public class UnlockSlider: UIView {
 
     // MARK: - Public Properties
 
-    // MARK: - Views
-
-    public let sliderView = UIView()
-    public let sliderBackgroundView = UIView()
-    public let sliderBackgroundViewTextLabel = UILabel()
-    public let sliderDraggedView = UIView()
-    public let sliderDraggedViewTextLabel = UILabel()
-    public var sliderImageView = RoundImageView()
-
-    // MARK: - Delegate
-
-    public weak var delegate: UnlockSliderDelegate?
-
-    // MARK: - Flags
-
+    /// Flags
     public var isDoubleSideEnabled: Bool = true
     public var isImageViewRotating: Bool = true
     public var isTextChangeAnimating: Bool = true
     public var isDebugPrintEnabled: Bool = false
-
+    public var isEnabled: Bool = true
     public var isShowSliderText: Bool = true {
         didSet {
             sliderDraggedViewTextLabel.isHidden = !isShowSliderText
         }
     }
 
-    public var isEnabled: Bool = true {
-        didSet {
-            animationChangedEnabledBlock?(isEnabled)
-        }
-    }
-
-    // MARK: - Parameters
-
+    /// Parameters
     public var sliderAnimationVelocity: Double = 0.2
-
     public var sliderViewTopDistance: CGFloat = .zero {
         didSet {
             topSliderConstraint?.constant = sliderViewTopDistance
             layoutIfNeeded()
         }
     }
-
     public var sliderImageViewTopDistance: CGFloat = .zero {
         didSet {
             topImageViewConstraint?.constant = sliderImageViewTopDistance
@@ -81,7 +58,6 @@ public class UnlockSlider: UIView {
             layoutIfNeeded()
         }
     }
-
     public var sliderImageViewStartingDistance: CGFloat = .zero {
         didSet {
             leadingImageViewConstraint?.constant = sliderImageViewStartingDistance
@@ -89,14 +65,12 @@ public class UnlockSlider: UIView {
             setNeedsLayout()
         }
     }
-
     public var sliderTextLabelLeadingDistance: CGFloat = .zero {
         didSet {
             leadingTextLabelConstraint?.constant = sliderTextLabelLeadingDistance
             setNeedsLayout()
         }
     }
-
     public var sliderCornerRadius: CGFloat = 30.0 {
         didSet {
             sliderBackgroundView.layer.cornerRadius = sliderCornerRadius
@@ -104,49 +78,66 @@ public class UnlockSlider: UIView {
         }
     }
 
-    // MARK: - Colors
-
+    /// Colors
     public var sliderBackgroundColor: UIColor = UIColor.white {
         didSet {
             sliderBackgroundView.backgroundColor = sliderBackgroundColor
             sliderDraggedViewTextLabel.textColor = sliderBackgroundColor
         }
     }
-
-    public var sliderBackgroundViewTextColor: UIColor = UIColor.unlockSliderRedColor {
+    public var sliderBackgroundViewTextColor: UIColor = UIColor.blue {
         didSet {
             sliderBackgroundViewTextLabel.textColor = sliderBackgroundViewTextColor
         }
     }
-
-    public var sliderDraggedViewTextColor: UIColor = UIColor.unlockSliderRedColor {
+    public var sliderDraggedViewTextColor: UIColor = UIColor.blue {
         didSet {
             sliderDraggedViewTextLabel.textColor = sliderDraggedViewTextColor
         }
     }
-
     public var sliderDraggedViewBackgroundColor: UIColor = UIColor.white {
         didSet {
             sliderDraggedView.backgroundColor = sliderDraggedViewBackgroundColor
         }
     }
-
-    public var sliderImageViewBackgroundColor: UIColor = UIColor.unlockSliderRedColor {
+    public var sliderImageViewBackgroundColor: UIColor = UIColor.blue {
         didSet {
             sliderImageView.backgroundColor = sliderImageViewBackgroundColor
         }
     }
-
-    // MARK: - Font
-
-    public var sliderTextFont: UIFont = UIFont.systemFont(ofSize: 15.0) {
+    public var sliderImageTintColor: UIColor = UIColor.white {
         didSet {
-            sliderBackgroundViewTextLabel.font = sliderTextFont
-            sliderDraggedViewTextLabel.font = sliderTextFont
+            sliderImageView.tintColor = sliderImageTintColor
         }
     }
 
+    // MARK: - Public Methods
+
+    public func setSliderImage(_ image: UIImage?) {
+        sliderImageView.setImage(image)
+    }
+
+    public func setSliderBackgroundViewTitle(_ title: String?) {
+        sliderBackgroundViewTextLabel.text = title
+    }
+
+    public func setSliderDraggedViewTitle(_ title: String?) {
+        sliderDraggedViewTextLabel.text = title
+    }
+
+    public func setSliderFont(_ font: UIFont = .systemFont(ofSize: 15.0)) {
+        sliderBackgroundViewTextLabel.font = font
+        sliderDraggedViewTextLabel.font = font
+    }
+
     // MARK: - Private Properties
+
+    private let sliderView = UIView()
+    private let sliderBackgroundView = UIView()
+    private let sliderBackgroundViewTextLabel = UILabel()
+    private let sliderDraggedView = UIView()
+    private let sliderDraggedViewTextLabel = UILabel()
+    private var sliderImageView = RoundImageView()
 
     private var leadingImageViewConstraint: NSLayoutConstraint?
     private var leadingTextLabelConstraint: NSLayoutConstraint?
@@ -164,7 +155,7 @@ public class UnlockSlider: UIView {
         sliderImageViewStartingDistance
     }
 
-    private var animationChangedEnabledBlock: ((Bool) -> Void)?
+    private weak var delegate: UnlockSliderDelegate?
 
     // MARK: - View Lifecycle
 
@@ -261,11 +252,9 @@ public class UnlockSlider: UIView {
     private func setupBaseStyle() {
         sliderImageView.backgroundColor = sliderImageViewBackgroundColor
 
-        sliderBackgroundViewTextLabel.font = sliderTextFont
         sliderBackgroundViewTextLabel.textColor = sliderBackgroundViewTextColor
         sliderBackgroundViewTextLabel.textAlignment = .center
 
-        sliderDraggedViewTextLabel.font = sliderTextFont
         sliderDraggedViewTextLabel.textColor = sliderDraggedViewTextColor
         sliderDraggedViewTextLabel.textAlignment = .center
         sliderDraggedViewTextLabel.isHidden = !isShowSliderText
@@ -276,19 +265,6 @@ public class UnlockSlider: UIView {
         sliderDraggedView.layer.cornerRadius = sliderCornerRadius
         sliderDraggedView.clipsToBounds = true
         sliderDraggedView.layer.masksToBounds = true
-    }
-
-    // MARK: - Public Methods
-
-    public func resetStateWithAnimation(_ animated: Bool) {
-        updateThumbnail(withPosition: xStartPoint, andAnimation: animated)
-        updateTextLabels(withPosition: .zero)
-        sliderPosition = .left
-        layoutIfNeeded()
-    }
-
-    public static func mainColor() -> UIColor {
-        return UIColor.unlockSliderRedColor
     }
 
     // MARK: - Private Methods
@@ -414,5 +390,12 @@ public class UnlockSlider: UIView {
                 delegate?.unlockSlider(self, didFinishSlidingAt: .left)
             }
         }
+    }
+
+    private func resetStateWithAnimation(_ animated: Bool) {
+        updateThumbnail(withPosition: xStartPoint, andAnimation: animated)
+        updateTextLabels(withPosition: .zero)
+        sliderPosition = .left
+        layoutIfNeeded()
     }
 }

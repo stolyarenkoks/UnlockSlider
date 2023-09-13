@@ -25,7 +25,7 @@
 
 import Foundation
 
-// MARK: - UnlockSliderDelegate
+// MARK: - UnlockSliderDelegate Protocol
 
 @MainActor public protocol UnlockSliderDelegate: AnyObject {
     func unlockSlider(_ slider: UnlockSlider, didFinishSlidingAt position: UnlockSliderPosition)

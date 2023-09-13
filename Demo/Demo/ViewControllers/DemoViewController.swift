@@ -64,7 +64,7 @@ class DemoViewController: UIViewController {
 
     private func setupUI() {
         titleLabel.text = Const.Demo.title
-        view.backgroundColor = UnlockSlider.mainColor()
+        view.backgroundColor = .redColor
     }
 
     private func setupSlider() {
@@ -85,18 +85,16 @@ class DemoViewController: UIViewController {
         slider.sliderCornerRadius = sliderContainer.frame.height / 2
 
         slider.sliderBackgroundColor = .white
-        slider.sliderBackgroundViewTextColor = UnlockSlider.mainColor()
-        slider.sliderDraggedViewTextColor = UnlockSlider.mainColor()
+        slider.sliderBackgroundViewTextColor = .redColor
+        slider.sliderDraggedViewTextColor = .redColor
         slider.sliderDraggedViewBackgroundColor = .white
-        slider.sliderImageViewBackgroundColor = UnlockSlider.mainColor()
+        slider.sliderImageViewBackgroundColor = .redColor
+        slider.sliderImageTintColor = .white
 
-        slider.sliderTextFont = .systemFont(ofSize: 15.0)
-
-        let chevronImage = UIImage(systemName: "chevron.right")?.applyingSymbolConfiguration(.init(weight: .medium))
-        slider.sliderImageView.setImage(chevronImage)
-        slider.sliderImageView.tintColor = .white
-        slider.sliderBackgroundViewTextLabel.text = Const.Demo.activateSliderTitle
-        slider.sliderDraggedViewTextLabel.text = Const.Demo.deactivateSliderTitle
+        slider.setSliderImage(UIImage(systemName: "chevron.right")?.applyingSymbolConfiguration(.init(weight: .medium)))
+        slider.setSliderFont(.systemFont(ofSize: 15.0))
+        slider.setSliderBackgroundViewTitle(Const.Demo.activateSliderTitle)
+        slider.setSliderDraggedViewTitle(Const.Demo.deactivateSliderTitle)
 
         view.addSubview(slider)
     }

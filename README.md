@@ -131,23 +131,23 @@ slider.isShowSliderText = true
 slider.isEnabled = true
 
 slider.sliderAnimationVelocity = 0.2
-slider.sliderViewTopDistance = 0.0
-slider.sliderImageViewTopDistance = 5
-slider.sliderImageViewStartingDistance = 5
-slider.sliderTextLabelLeadingDistance = 0
+slider.sliderViewTopDistance = .zero
+slider.sliderImageViewTopDistance = 4.0
+slider.sliderImageViewStartingDistance = 4.0
+slider.sliderTextLabelLeadingDistance = .zero
 slider.sliderCornerRadius = sliderContainer.frame.height / 2
 
-slider.sliderBackgroundColor = UIColor.white
-slider.sliderBackgroundViewTextColor = UnlockSlider.sliderRedColor()
-slider.sliderDraggedViewTextColor = UnlockSlider.sliderRedColor()
-slider.sliderDraggedViewBackgroundColor = UIColor.white
-slider.sliderImageViewBackgroundColor = UnlockSlider.sliderRedColor()
+slider.sliderBackgroundColor = .white
+slider.sliderBackgroundViewTextColor = .red
+slider.sliderDraggedViewTextColor = .red
+slider.sliderDraggedViewBackgroundColor = .white
+slider.sliderImageViewBackgroundColor = .red
+slider.sliderImageTintColor = .white
 
-slider.sliderTextFont = UIFont.systemFont(ofSize: 15.0)
-
-slider.sliderImageView.image = UIImage(named: "arrow-icon")
-slider.sliderBackgroundViewTextLabel.text = "SLIDE TO TURN ON!"
-slider.sliderDraggedViewTextLabel.text = "SLIDE TO TURN OFF!"
+slider.setSliderImage(UIImage(systemName: "chevron.right"))
+slider.setSliderFont(.systemFont(ofSize: 15.0))
+slider.setSliderBackgroundViewTitle("Slide to Activate")
+slider.setSliderDraggedViewTitle("Slide to Deactivate")
 
 view.addSubview(slider)
 ```

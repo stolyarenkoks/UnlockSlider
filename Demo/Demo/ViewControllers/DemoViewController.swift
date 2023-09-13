@@ -79,8 +79,8 @@ class DemoViewController: UIViewController {
 
         slider.sliderAnimationVelocity = AnimationTime.veryFast.rawValue
         slider.sliderViewTopDistance = .zero
-        slider.sliderImageViewTopDistance = 5
-        slider.sliderImageViewStartingDistance = 5
+        slider.sliderImageViewTopDistance = 4.0
+        slider.sliderImageViewStartingDistance = 4.0
         slider.sliderTextLabelLeadingDistance = .zero
         slider.sliderCornerRadius = sliderContainer.frame.height / 2
 

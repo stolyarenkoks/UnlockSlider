@@ -1,7 +1,8 @@
 //
 //  UnlockSlider.swift
+//  UnlockSlider
 //
-//  Copyright (c) 2020 Konstantin Stolyarenko
+//  Copyright © 2023 Konstantin Stolyarenko
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -24,13 +25,13 @@
 
 import UIKit
 
-// MARK: UnlockSlider
+// MARK: - UnlockSlider
 
 public class UnlockSlider: UIView {
 
-    // MARK: Public Properties
+    // MARK: - Public Properties
 
-    // MARK: Views
+    // MARK: - Views
 
     public let sliderView = UIView()
     public let sliderBackgroundView = UIView()
@@ -39,11 +40,11 @@ public class UnlockSlider: UIView {
     public let sliderDraggedViewTextLabel = UILabel()
     public var sliderImageView = RoundImageView()
 
-    // MARK: Delegate
+    // MARK: - Delegate
 
     public weak var delegate: UnlockSliderDelegate?
 
-    // MARK: Flags
+    // MARK: - Flags
 
     public var isDoubleSideEnabled: Bool = true
     public var isImageViewRotating: Bool = true
@@ -62,7 +63,7 @@ public class UnlockSlider: UIView {
         }
     }
 
-    // MARK: Parameters
+    // MARK: - Parameters
 
     public var sliderAnimationVelocity: Double = 0.2
 
@@ -103,7 +104,7 @@ public class UnlockSlider: UIView {
         }
     }
 
-    // MARK: Colors
+    // MARK: - Colors
 
     public var sliderBackgroundColor: UIColor = UIColor.white {
         didSet {
@@ -136,7 +137,7 @@ public class UnlockSlider: UIView {
         }
     }
 
-    // MARK: Font
+    // MARK: - Font
 
     public var sliderTextFont: UIFont = UIFont.systemFont(ofSize: 15.0) {
         didSet {
@@ -145,7 +146,7 @@ public class UnlockSlider: UIView {
         }
     }
 
-    // MARK: Private Properties
+    // MARK: - Private Properties
 
     private var leadingImageViewConstraint: NSLayoutConstraint?
     private var leadingTextLabelConstraint: NSLayoutConstraint?

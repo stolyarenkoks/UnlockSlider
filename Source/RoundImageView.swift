@@ -1,7 +1,8 @@
 //
 //  RoundImageView.swift
+//  UnlockSlider
 //
-//  Copyright (c) 2020 Konstantin Stolyarenko
+//  Copyright © 2023 Konstantin Stolyarenko
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal

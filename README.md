@@ -1,8 +1,9 @@
 # UnlockSlider
+Fully customized Slide to Unlock Control, written on Swift under the short name - UnlockSlider.
 
-![UnlockSlider](https://github.com/codeit-ios/UnlockSlider/blob/develop/unlockSlider.png)
+![Preview](preview.png)
 
-### Fully customized Slide to Unlock Control, written on Swift under the short name - UnlockSlider.
+[Demo Video](demo.mov)
 
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/UnlockSlider)
 ![CocoaPods compatible](https://img.shields.io/badge/CocoaPods-compatible-brightgreen)
@@ -36,12 +37,12 @@
 
 ## Requirements
 
-- iOS 10.0+
-- Xcode 10.2+
-- Swift 5+
+- iOS 14.0+
+- Xcode 14.0+
+- Swift 5.0+
 
 ## Communication
-- If you'd like to **contact us** write to kostiantyn.stoliarenko@codeit.pro
+- If you'd like to **contact us** write to stolyarenko.kons@gmail.com
 - If you **found a bug**, open an issue here on GitHub and follow the guide. The more detail the better!
 - If you **want to contribute**, submit a pull request.
 

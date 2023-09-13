@@ -13,7 +13,6 @@ Fully customized Slide to Unlock Control, written on Swift under the short name 
 [![GitHub stars](https://img.shields.io/github/stars/stolyarenkoks/UnlockSlider)](https://github.com/stolyarenkoks/UnlockSlider/stargazers)
 ![GitHub watchers](https://img.shields.io/github/watchers/stolyarenkoks/UnlockSlider?style=plastic)
 ![GitHub contributors](https://img.shields.io/github/contributors/stolyarenkoks/UnlockSlider)
-
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/stolyarenkoks/UnlockSlider)
 ![GitHub last commit](https://img.shields.io/github/last-commit/stolyarenkoks/UnlockSlider)
 [![GitHub license](https://img.shields.io/github/license/stolyarenkoks/UnlockSlider)](https://github.com/stolyarenkoks/UnlockSlider/blob/develop/LICENSE)
@@ -118,7 +117,8 @@ If you prefer not to use any of the aforementioned dependency managers, you can 
 import UnlockSlider
 ```
 
-The slider can be inserted in a view hierarchy as a subview. Appearance can be configured with a number of public attributes:
+The slider can be inserted in a view hierarchy as a subview. <br>
+Appearance can be configured with a number of public attributes and methods:
 
 ```swift
 let slider = UnlockSlider(frame: sliderContainer.frame, delegate: self)
@@ -152,7 +152,7 @@ slider.setSliderDraggedViewTitle("Slide to Deactivate")
 view.addSubview(slider)
 ```
 
-Take a look at the `Example` project for an integration example.
+Take a look at the `Demo` project for an integration and customization example.
 
 ## License
 

@@ -157,6 +157,11 @@ public class UnlockSlider: UIView {
 
     private weak var delegate: UnlockSliderDelegate?
 
+    private var wasLandscape = false
+    private var isLandscape: Bool {
+        UIDevice.current.orientation == .landscapeLeft || UIDevice.current.orientation == .landscapeRight
+    }
+
     // MARK: - View Lifecycle
 
     override public init(frame: CGRect) {
@@ -174,6 +179,12 @@ public class UnlockSlider: UIView {
     public convenience init(frame: CGRect, delegate: UnlockSliderDelegate? = nil) {
         self.init(frame: frame)
         self.delegate = delegate
+    }
+
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+
+        layoutElements(forceRedraw: wasLandscape != isLandscape)
     }
 
     // MARK: - Setup Methods
@@ -396,6 +407,15 @@ public class UnlockSlider: UIView {
         updateThumbnail(withPosition: xStartPoint, andAnimation: animated)
         updateTextLabels(withPosition: .zero)
         sliderPosition = .left
+        layoutIfNeeded()
+    }
+
+    private func layoutElements(forceRedraw: Bool) {
+        guard forceRedraw else { return }
+        wasLandscape = isLandscape
+        let position = sliderPosition.isLeftPosition ? xStartPoint : xEndingPoint
+        updateThumbnail(withPosition: position, andAnimation: true)
+        updateTextLabels(withPosition: position)
         layoutIfNeeded()
     }
 }

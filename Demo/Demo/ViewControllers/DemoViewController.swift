@@ -75,6 +75,12 @@ class DemoViewController: UIViewController {
         updateLabel()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        gradientLayer.frame = view.bounds
+    }
+
     // MARK: - Setup Methods
 
     private func setupUI() {
@@ -118,6 +124,7 @@ class DemoViewController: UIViewController {
         slider.setSliderDraggedViewTitle(Const.Demo.deactivateSliderTitle)
 
         view.addSubview(slider)
+        slider.pinEdges(to: sliderContainer)
     }
 
     // MARK: - Private Methods

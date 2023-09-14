@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C41281532AB1A7DD005E8494 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41281522AB1A7DD005E8494 /* Const.swift */; };
+		C45AC55A2AB3169500F196D5 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45AC5592AB3169500F196D5 /* UIView+Extensions.swift */; };
 		C4C5815C2AB1D51F00AFE94A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C5815B2AB1D51F00AFE94A /* UIColor+Extensions.swift */; };
 		C4C581652AB1E12800AFE94A /* UnlockSlider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C581642AB1E12800AFE94A /* UnlockSlider.framework */; };
 		C4C581662AB1E12800AFE94A /* UnlockSlider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4C581642AB1E12800AFE94A /* UnlockSlider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		C41281522AB1A7DD005E8494 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		C45AC5592AB3169500F196D5 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		C4C5815B2AB1D51F00AFE94A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		C4C581642AB1E12800AFE94A /* UnlockSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = UnlockSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C581672AB1E2AA00AFE94A /* CAGradientLayer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+Extensions.swift"; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		C4C5815A2AB1D50A00AFE94A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C45AC5592AB3169500F196D5 /* UIView+Extensions.swift */,
 				C4C5815B2AB1D51F00AFE94A /* UIColor+Extensions.swift */,
 				C4C581672AB1E2AA00AFE94A /* CAGradientLayer+Extensions.swift */,
 			);
@@ -254,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C45AC55A2AB3169500F196D5 /* UIView+Extensions.swift in Sources */,
 				CE1C362723F17DDC008F5BDE /* DemoViewController.swift in Sources */,
 				C4C5815C2AB1D51F00AFE94A /* UIColor+Extensions.swift in Sources */,
 				C41281532AB1A7DD005E8494 /* Const.swift in Sources */,

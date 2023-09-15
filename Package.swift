@@ -1,3 +1,4 @@
+// swift-tools-version:5.9
 //
 //  Package.swift
 //  UnlockSlider
@@ -27,7 +28,7 @@ import PackageDescription
 
 let package = Package(name: "UnlockSlider",
                       platforms: [
-                        .iOS(.v10)
+                        .iOS(.v14)
                       ],
                       products: [
                         .library(name: "UnlockSlider",

@@ -36,7 +36,8 @@ let package = Package(name: "UnlockSlider",
                       ],
                       targets: [
                         .target(name: "UnlockSlider",
-                                path: "Source")
+                                path: "Source",
+                                exclude: ["Supporting Files"])
                       ],
                       swiftLanguageVersions: [
                         .v5

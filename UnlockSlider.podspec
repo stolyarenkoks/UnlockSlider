@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'UnlockSlider'
-  s.version = '0.0.2'
+  s.version = '0.1.0'
   s.license = { :type => 'MIT', :file => 'LICENSE' }
   s.summary = 'Fully customized Slide to Unlock Control, written on Swift under the short name - UnlockSlider'
   s.homepage = 'https://github.com/stolyarenkoks/UnlockSlider'

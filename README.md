@@ -155,5 +155,4 @@ view.addSubview(slider)
 Take a look at the `Demo` project for an integration and customization example.
 
 ## License
-
-UnlockSlider is released under the MIT license. [See LICENSE](https://github.com/stolyarenkoks/UnlockSlider/blob/master/LICENSE) for details.
+Copyright © January 06, 2025 Konstantin Stolyarenko. All rights reserved.

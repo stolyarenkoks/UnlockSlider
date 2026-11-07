@@ -155,4 +155,4 @@ view.addSubview(slider)
 Take a look at the `Demo` project for an integration and customization example.
 
 ## License
-Copyright © October 31, 2026 Konstantin Stolyarenko. All rights reserved.
+Copyright © November 07, 2026 Konstantin Stolyarenko. All rights reserved.
